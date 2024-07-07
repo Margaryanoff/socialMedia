@@ -1,0 +1,56 @@
+.PostsCard{
+box-shadow:0px 0px 5px 2px gray ;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
+}
+.user_post_info h3{
+  color: white;
+}
+.user_img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center;
+
+}
+.user_post_info p{
+    color: gray;
+}
+
+
+.post_user_info{
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+}
+
+.post_title p{
+    padding: 10px ;
+    font-size: 20px;
+    color: white;
+}
+.title_img_bg{
+    width: 600px;
+    height: 200px;
+    background-size: cover;
+    background-position:center;
+    border-radius: 10px;
+}
+.like_icon_div{
+    margin-top: 5px;
+    border-top: 1px solid gray;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+.like_icon_div h3{
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}

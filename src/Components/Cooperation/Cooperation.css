@@ -1,0 +1,126 @@
+.cooperation_header {
+    .cooperation_title {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        color: white;
+        padding: 30px;
+        border-radius: 30px;
+        background: var(--idk);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        p {
+            font-size: 17px;
+            line-height: 1.4;
+        }
+        img {
+            width: 100px;
+        }
+    }
+    h1{
+        font-family: "titles";
+        font-size: 43px;
+        letter-spacing: 3px;
+    }
+    .cooperation_formik {
+        display: flex;
+        border: 2px solid white;
+        border-radius: 21px;
+        padding: 30px;
+        background: var(--idk);
+        justify-content: center;
+        form {
+            background: var(--primary);
+            width: 60%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid white;
+            gap: 13px;
+            border-radius: 21px;
+            label {
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                strong {
+                    color: white;
+                    background: var(--primary);
+                    display: inline-block;
+                    transform: translateY(13px);
+                    padding: 3px 9px;
+                    border-radius: 4px;
+                    font-weight: 400;
+                }
+                p {
+                    position: absolute;
+                    color: red;
+                    text-shadow: 0 0 10px red;
+                    right: 22%;
+                    top: 52.5%;
+                }
+                input {
+                    padding: 8px;
+                    background: transparent;
+                    border: 2px solid white;
+                    border-radius: 9px;
+                    width: 60%;
+                    outline: none;
+                    color: white;
+                    font-size: 15px;
+                }
+            }
+            .field_role {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: 60%;
+                margin-top: 13px;
+                position: relative;
+                textarea {
+                    outline: none;
+                    border-radius: 9px;
+                    background: transparent;
+                    border: 2px solid white;
+                    color: white;
+                    font-size: 15px;
+                    padding: 12px;
+                    &::placeholder {
+                        color: white;
+                        font-size: 15px;
+                    }
+                }
+                select {
+                    outline: none;
+                    font-size: 15px;
+                    border: 2px solid;
+                    background: transparent;
+                    color: white;
+                    padding: 4px;
+                    border-radius: 6px;
+                }
+            }
+            button {
+                padding: 5px 40px;
+                background: white;
+                color: var(--primary);
+                border: 2px solid white;
+                border-radius: 8px;
+                transition: 0.2s;
+                &:hover {
+                    background: var(--primary);
+                    color: white;
+                    transition: 0.2s;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

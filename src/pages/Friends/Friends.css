@@ -1,0 +1,56 @@
+main {
+    .frineds_main_div {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        section {
+            flex: 0.5;
+        }
+        .section_existing_friends {
+            border: 2px solid;
+            min-height: 400px;
+            div {
+                background: wheat;
+                padding: 3px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                img {
+                    width: 100px;
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                }
+                button {
+                    margin-left: 40px;
+                    padding: 5px 34px;
+                    background: white;
+                    color: var(--primary);
+                    transition: 0.2s;
+                    border-radius: 7px;
+                    border: 2px solid var(--primary);
+                    &:hover {
+                        background: var(--primary);
+                        color: white;
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+        .allFriends {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+            .friend_bg {
+                width: 70px;
+                aspect-ratio: 1/1;
+                background-position: center;
+                background-size: cover;
+                border-radius: 50%;
+            }
+            .each_friend {
+                width: 40%;
+                border: 2px solid;
+            }
+        }
+    }
+}

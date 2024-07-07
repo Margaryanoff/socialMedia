@@ -1,0 +1,183 @@
+.PostsCard {
+    box-shadow: 0px 0px 5px 2px gray;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px 0px;
+    background: var(--primary);
+}
+.user_post_info h3 {
+    color: white;
+}
+.user_img {
+    width: 70px;
+    aspect-ratio: 1/1;
+    border: 2px solid white;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+    background-size: contain;
+    background-position: center;
+}
+.user_post_info p {
+    color: white;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.post_user_info {
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+}
+
+.post_title p {
+    width: 90%;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+.title_img_bg {
+    max-height: 600px;
+    min-height: 400px;
+    width: 95%;
+    margin: 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    border-radius: 10px;
+}
+
+.like_icon_div {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    position: relative;
+    .postActions {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        color: white;
+        div {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.182);
+            padding: 5px 20px;
+            border-radius: 9px;
+        }
+    }
+    .share {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.182);
+        padding: 5px 20px;
+        border-radius: 9px;
+        color: white;
+    }
+    .comments {
+        background: var(--primary);
+        border: 2px solid white;
+        position: absolute;
+        bottom: 105%;
+        width: 90%;
+        display: flex;
+        gap: 10px;
+        > div {
+            flex: 0.5;
+        }
+        .comment_writing_section {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+            span {
+                padding: 10px;
+                cursor: pointer;
+                transition: 0.2s;
+                display: inline-block;
+                svg {
+                    transition: 0.2s;
+                    width: 23px;
+                    height: 23px;
+                    color: white;
+                }
+                &:hover svg {
+                    scale: 1.2;
+                    transition: 0.2s;
+                }
+            }
+            textarea {
+                border: none;
+                width: 90%;
+                color: var(--primary);
+                font-size: 15px;
+                padding: 7px;
+                z-index: 9999;
+                outline: none;
+                &::placeholder {
+                    color: var(--primary);
+                    font-size: 15px;
+                }
+            }
+            form {
+                display: flex;
+                width: 100%;
+                overflow: hidden;
+            }
+            button {
+                transition: 0.2s;
+                border: 2px solid white;
+                padding: 5px 10px;
+                color: white;
+                background: white;
+                color: var(--primary);
+                writing-mode: vertical-lr;
+                &:hover {
+                    scale: 1.4;
+                    transition: 0.2s;
+                    background: var(--primary);
+                    color: white;
+                }
+            }
+        }
+        .comment_reading_section {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            max-height: 200px;
+            overflow: scroll;
+            .each_comment {
+                padding: 3px;
+                img {
+                    width: 50px;
+                    border-radius: 50%;
+                    aspect-ratio: 1/1;
+                    border: 2px solid white;
+                }
+                .comment_nick_img {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    h3 {
+                        font-weight: 400;
+                    }
+                }
+                p {
+                    padding: 6px 0;
+                    color: white;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,291 @@
+.welcome_main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 40px;
+}
+.welcome_icons {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    position: fixed;
+    top: 50%;
+    padding: 20px 7px;
+    border-radius: 22px;
+    background: rgb(0, 0, 0, 0.2);
+    gap: 40px;
+    color: white;
+    p {
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    p:hover {
+        transition: 0.5s;
+        transform: rotateY(360deg);
+        color: rgb(0, 179, 255);
+    }
+}
+.animation_p {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.welcome_info {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    color: white;
+    p {
+        font-weight: 100;
+    }
+    h1 {
+        font-family: "titles"; 
+        border: none !important;
+        width: 100px;
+        color: rgb(0, 179, 255);
+    }
+}
+/* .slides_main_div {
+    width: 50%;
+} */
+.welcome_sign {
+    width: 400px;
+    min-height: 450px;
+    background: rgb(0, 0, 0, 0.3);
+    border: 2px solid;
+    padding: 20px;
+    border-radius: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    gap: 10px;
+    animation-name: sign-animation;
+    animation-duration: 2s;
+    animation-delay: 2.2s;
+    animation-fill-mode: both;
+    transform: translateY(-1000px);
+    h2 {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: 13px;
+        span {
+            margin: 0;
+            text-decoration: none;
+            color: rgb(0, 179, 255);
+            font-size: 25px;
+        }
+    }
+    .register_portal {
+        a {
+            font-weight: 600;
+            transition: 0.2s;
+            color: rgb(0, 179, 255);
+            position: relative;
+            padding-bottom: 4px;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background: rgb(0, 179, 255);
+                scale: 0;
+                transition: 0.2s;
+                bottom: 0;
+                transform-origin: left;
+            }
+            &:hover::before {
+                scale: 1;
+                transition: 0.2s;
+            }
+        }
+    }
+    .submitButton_remember {
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .checkbox_remember {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            p {
+                text-wrap: nowrap;
+            }
+        }
+        button {
+            padding: 5px 30px;
+            border-radius: 8px;
+            background: rgb(0, 179, 255);
+            color: white;
+            font-weight: 500;
+            border: 2px solid white;
+            transition: 0.2s;
+            cursor: pointer;
+            &:hover {
+                background: rgb(4, 135, 191);
+                transition: 0.2s;
+            }
+        }
+    }
+    .main_labels {
+        margin: 20px 0;
+        display: block;
+        position: relative;
+        strong {
+            position: absolute;
+            right: 0;
+            color: white;
+            background: rgba(255, 0, 0, 0.621);
+            padding: 3px 7px;
+            font-weight: 500;
+            border-radius: 10px;
+        }
+    }
+    input {
+        outline: none;
+        padding: 7px;
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid white;
+        color: rgb(0, 179, 255);
+        font-size: 15px;
+        color: white;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.p2,
+.p4 {
+    color: rgb(0, 179, 255);
+}
+
+.p1 {
+    margin-left: 15px;
+    transform: translateX(-1000px);
+    animation-name: p-animation;
+    animation-duration: 2.5s;
+    animation-delay: 0.7s;
+    animation-fill-mode: both;
+}
+.p2 {
+    margin-left: 50px;
+    transform: translateX(-1000px);
+    animation-name: p-animation;
+    animation-duration: 2.5s;
+    animation-delay: 1.3s;
+    animation-fill-mode: both;
+}
+.p3 {
+    margin-left: 80px;
+    transform: translateX(-1000px);
+    animation-name: p-animation;
+    animation-duration: 2.5s;
+    animation-delay: 1.8s;
+    animation-fill-mode: both;
+}
+.p4 {
+    margin-left: 110px;
+    transform: translateX(-1000px);
+    animation-name: p-animation;
+    animation-duration: 2.5s;
+    animation-delay: 2.2s;
+    animation-fill-mode: both;
+}
+
+@keyframes p-animation {
+    to {
+        transform: translate(0);
+    }
+}
+
+@keyframes sign-animation {
+    to {
+        transform: translate(0);
+    }
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    background: radial-gradient(
+        circle,
+        rgba(34, 108, 91, 1) 0%,
+        rgba(101, 9, 121, 1) 35%,
+        rgba(147, 88, 56, 1) 59%,
+        rgba(50, 210, 244, 1) 100%
+    );
+    animation: gradient 25s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}

@@ -1,0 +1,145 @@
+.register_header {
+    z-index: 99999;
+    margin-top: 40px;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        min-height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+        top: 0;
+    }
+    .register_main_div {
+        border: 3px solid white;
+        border-radius: 30px;
+        box-shadow: 0 0 20px white;
+        overflow: hidden;
+        display: flex;
+        position: relative;
+        min-height: 600px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            aspect-ratio: 1/1;
+            background: rgba(255, 255, 255, 0.134);
+            z-index: 0;
+        }
+        .logo_register_left {
+            display: grid;
+            place-items: center;
+            width: 40%;
+            background: linear-gradient(to right, transparent, rgb(11, 60, 79) 60%);
+            img {
+                width: 400px;
+            }
+        }
+        .formik {
+            z-index: 99999;
+            flex: 1;
+            background: linear-gradient(
+                to right,
+                var(--primary) 10%,
+                transparent,
+                var(--primary) 90%
+            );
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            gap: 50px;
+            h1 {
+                font-family: "titles";
+                letter-spacing: 3px;
+                font-size: 54px;
+                text-align: left;
+                width: 95%;
+                color: white;
+            }
+            form {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 30px;
+                flex-wrap: wrap;
+                > div {
+                    position: relative;
+                    width: 45%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    gap: 20px;
+                    input {
+                        width: 100%;
+                        padding: 9px;
+                        background: transparent;
+                        border: none;
+                        border: 2px solid white;
+                        border-radius: 8px;
+                        color: white;
+                        font-size: 15px;
+                        outline: none;
+                    }
+
+                    label {
+                        color: white;
+                        font-size: 17px;
+                        position: relative;
+                        p {
+                            transform: translateY(10px);
+                            margin: 0 10px;
+                            background: var(--primary);
+                            display: inline-block;
+                            padding: 0 10px;
+                            border-radius: 8px;
+                        }
+                        strong {
+                            position: absolute;
+                            right: 10px;
+                            top: 50%;
+                            color: red;
+                            text-shadow: 0 0 5px red;
+                        }
+                    }
+                    .radios {
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 20px;
+                        align-items: center;
+                        label {
+                            gap: 5px;
+                            display: flex;
+                        }
+                        span {
+                            display: flex;
+                            gap: 12px;
+                        }
+                    }
+                }
+                button {
+                    padding: 5px 34px;
+                    border: 2px solid var(--primary);
+                    background: white;
+                    color: var(--primary);
+                    transition: 0.2s;
+                    cursor: pointer;
+                    &:hover {
+                        background: transparent;
+                        color: white;
+                        border: 2px solid white;
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+}
+.formik_right {
+    label {
+        p {
+            float: right;
+        }
+    }
+}

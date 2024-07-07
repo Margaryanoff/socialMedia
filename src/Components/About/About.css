@@ -1,0 +1,94 @@
+.about_header {
+    .vision {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        color: white;
+        padding: 30px;
+        border-radius: 30px;
+        background: var(--idk);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+            font-size: 17px;
+            line-height: 1.4;
+        }
+        img {
+            width: 100px;
+        }
+    }
+    .features {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        align-content: center;
+        h1 {
+            font-family: "titles";
+            font-size: 43px;
+            letter-spacing: 3px;
+            text-align: center;
+            color: white;
+        }
+        .features_cards {
+            display: flex;
+            gap: 60px;
+            flex-wrap: wrap;
+            div {
+                position: relative;
+                width: 30%;
+                background: var(--idk);
+                border: 2px solid white;
+                padding: 20px;
+                padding-top: 40px;
+                border-radius: 21px;
+                box-shadow: 0 0 10px transparent;
+                transition: 0.2s;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 60px;
+                    top: -2px;
+                    height: 2px;
+                    transition: 0.2s;
+                    background: var(--primary);
+                }
+                .svg_span {
+                    transition: 0.2s;
+                    position: absolute;
+                    top: -40px;
+                    border-top: 2px solid white;
+                    border-left: 2px solid transparent;
+                    border-radius: 12px;
+                    padding: 10px;
+                    background: linear-gradient(
+                        to bottom,
+                        var(--idk) 61%,
+                        transparent 61%
+                    );
+                    border-right: 2px solid white;
+                }
+                h2,
+                p {
+                    color: white;
+                }
+                h2 {
+                    margin-bottom: 12px;
+                }
+                &:hover .svg_span {
+                    transform: translateX(225%);
+                    border-left: 2px solid white;
+                }
+                &:hover::before {
+                    transform: translateX(240%);
+                }
+                &:hover {
+                    scale: 1.02;
+                    box-shadow: 0 0 10px white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

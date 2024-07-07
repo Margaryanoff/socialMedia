@@ -1,0 +1,39 @@
+.wrapper {
+    color: white;
+    width: 600px;
+    margin: auto;
+    img {
+        width: 60px;
+        aspect-ratio: 1/1;
+    }
+
+    > div {
+        background: rgba(0, 0, 0, 0.55);
+        border-radius: 21px;
+        padding: 13px;
+        > div {
+            padding: 0 12px;
+            border-radius: 21px;
+            border-bottom: 2px solid white;
+            max-width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            h2 {
+                font-weight: 300;
+            }
+        }
+        p {
+            margin: 13px 0;
+            width: 100% !important;
+        }
+    }
+}
+h1 {
+    color: white;
+    font-family: "titles" !important;
+    border: none !important;
+    font-size: 54px;
+    letter-spacing: 3px;
+    text-align: center;
+}

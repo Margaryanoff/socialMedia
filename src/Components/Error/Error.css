@@ -1,0 +1,24 @@
+.error_main {
+    display: grid;
+    place-items: center;
+    height: 60vh;
+    h1 {
+        color: white;
+        font-size: 65px;
+    }
+    a {
+        color: white;
+        border: 2px solid white;
+        background: var(--primary);
+        padding: 5px 50px;
+        margin: 0 12px;
+        border-radius: 9px;
+        transition: 0.2s;
+        &:hover {
+            transition: 0.2s;
+            color: var(--primary);
+            background: white;
+            border: 2px solid var(--primary);
+        }
+    }
+}
